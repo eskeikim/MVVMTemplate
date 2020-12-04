@@ -6,7 +6,7 @@ object Depends {
 
     object Versions {
         const val appVersionCode = 1_000_000
-        const val gradleVersion = "4.2.0-alpha16"
+        const val gradleVersion = "7.0.0-alpha01"
         const val androidCompileSdkVersion = 29
         const val targetSdkVersion = 29
         const val minSdkVersion = 21
@@ -40,8 +40,9 @@ object Depends {
         const val glideVersion = "4.11.0"
         const val autoDispose = "1.4.0"
         const val preferenceVersion = "1.1.1"
-        const val composeVersion = "1.0.0-alpha07"
-        const val uiToolingVersion = "0.1.0-dev17"
+        const val composeVersion = "1.0.0-alpha08"
+        const val uiTestVersion = "1.0.0-alpha07"
+        const val uiToolingVersion = "1.0.0-alpha07"
         const val uiFrameworkVersion = "0.1.0-dev10"
         const val uiVersion = "0.1.0-dev14"
 
@@ -164,9 +165,9 @@ object Depends {
             "androidx.compose.runtime:runtime-saved-instance-state:${Versions.composeVersion}"
         const val compose_navigation =
             "androidx.navigation:navigation-compose:${Versions.composeNavigationVersion}"
-        const val ui_test = "androidx.ui:ui-test:${Versions.composeVersion}"
-        const val ui_tooling = "androidx.ui:ui-tooling:${Versions.composeVersion}"
-        const val ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
+        const val compose_ui = "androidx.compose.ui:ui:${Versions.composeVersion}"
+        const val ui_test = "androidx.ui:ui-test:${Versions.uiTestVersion}"
+        const val ui_tooling = "androidx.ui:ui-tooling:${Versions.uiToolingVersion}"
         const val ui_framework = "androidx.ui:ui-framework:${Versions.uiFrameworkVersion}"
         const val ui_foundation = "androidx.ui:ui-foundation:${Versions.uiVersion}"
         const val ui_layout = "androidx.ui:ui-layout:${Versions.uiVersion}"
