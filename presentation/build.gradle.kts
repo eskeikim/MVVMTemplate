@@ -16,13 +16,11 @@ android {
         compose = true
         dataBinding = false
         viewBinding = true
+        composeOptions.kotlinCompilerExtensionVersion = Depends.Versions.composeVersion
+        composeOptions.kotlinCompilerVersion = Depends.Versions.kotlinVersion
     }
-    /*composeOptions {
-        kotlinCompilerExtensionVersion(app.web.drjackycv.buildsrc.Depends.Versions.composeVersion)
-        kotlinCompilerVersion(app.web.drjackycv.buildsrc.Depends.Versions.kotlinVersion)
-    }*/
 
-    compileSdkVersion(app.web.drjackycv.buildsrc.Depends.Versions.androidCompileSdkVersion)
+    compileSdkVersion(Depends.Versions.androidCompileSdkVersion)
 
     defaultConfig {
         multiDexEnabled = true
@@ -88,7 +86,6 @@ dependencies {
     implementation(Depends.Libraries.navigation_ui_ktx)
     implementation(Depends.Libraries.paging_runtime_ktx)
     implementation(Depends.Libraries.paging_rx_ktx)
-    implementation(Depends.Libraries.android_lifecycle_extensions)
     implementation(Depends.Libraries.lifecycle_livedata_ktx)
     implementation(Depends.Libraries.lifecycle_runtime_ktx)
     implementation(Depends.Libraries.lifecycle_common_java8)
@@ -103,6 +100,8 @@ dependencies {
 //    implementation(Depends.Libraries.compose_foundation_layout)
     implementation(Depends.Libraries.compose_ui)
     implementation(Depends.Libraries.compose_material)
+//    implementation(Depends.Libraries.compose_runtime)
+//    implementation(Depends.Libraries.compose_runtime_dispatch)
 //    implementation(Depends.Libraries.compose_runtime_saved_instance_state)
 //    implementation(Depends.Libraries.compose_navigation)
 //    implementation(Depends.Libraries.ui_test)
@@ -122,8 +121,6 @@ dependencies {
     implementation(Depends.Libraries.glide)
     kapt(Depends.Libraries.glide_compiler)
     implementation(Depends.Libraries.lottie)
-    //android architecture component
-    implementation(Depends.Libraries.android_lifecycle_extensions)
     //test
     androidTestImplementation(Depends.Libraries.test_runner)
     androidTestImplementation(Depends.Libraries.test_rules)

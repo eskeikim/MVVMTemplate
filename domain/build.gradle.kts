@@ -57,7 +57,7 @@ dependencies {
     //android
     implementation(Depends.Libraries.paging_runtime_ktx)
     implementation(Depends.Libraries.paging_rx_ktx)
-    implementation(Depends.Libraries.lifecycle_livedata)
+    implementation(Depends.Libraries.lifecycle_livedata_ktx)
     implementation(Depends.Libraries.multidex)
     //reactive
     implementation(Depends.Libraries.rx_kotlin)

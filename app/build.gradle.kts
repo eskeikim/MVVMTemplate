@@ -10,7 +10,14 @@ plugins {
 }
 
 android {
-    compileSdkVersion(app.web.drjackycv.buildsrc.Depends.Versions.androidCompileSdkVersion)
+    buildFeatures {
+        compose = true
+        dataBinding = false
+        viewBinding = true
+        composeOptions.kotlinCompilerExtensionVersion = Depends.Versions.composeVersion
+        composeOptions.kotlinCompilerVersion = Depends.Versions.kotlinVersion
+    }
+    compileSdkVersion(Depends.Versions.androidCompileSdkVersion)
 
     defaultConfig {
         multiDexEnabled = true
@@ -105,22 +112,24 @@ dependencies {
     implementation(Depends.Libraries.android_core_ktx)
     implementation(Depends.Libraries.multidex)
     implementation(Depends.Libraries.fragment_ktx)
-    implementation(Depends.Libraries.android_lifecycle_extensions)
     implementation(Depends.Libraries.paging_runtime_ktx)
     implementation(Depends.Libraries.paging_rx_ktx)
     implementation(Depends.Libraries.preference_ktx)
     //compose
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_foundation_layout)
-    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_ui)
-    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_material)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_runtime_saved_instance_state)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.compose_navigation)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_test)
-    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_tooling)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_foundation)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_layout)
-//    implementation(app.web.drjackycv.buildsrc.Depends.Libraries.ui_material)
+//    implementation(Depends.Libraries.compose_foundation)
+//    implementation(Depends.Libraries.compose_foundation_layout)
+    implementation(Depends.Libraries.compose_ui)
+    implementation(Depends.Libraries.compose_material)
+//    implementation(Depends.Libraries.compose_runtime)
+//    implementation(Depends.Libraries.compose_runtime_dispatch)
+//    implementation(Depends.Libraries.compose_runtime_saved_instance_state)
+//    implementation(Depends.Libraries.compose_navigation)
+//    implementation(Depends.Libraries.ui_test)
+    implementation(Depends.Libraries.ui_tooling)
+//    implementation(Depends.Libraries.ui_framework)
+//    implementation(Depends.Libraries.ui_foundation)
+//    implementation(Depends.Libraries.ui_layout)
+//    implementation(Depends.Libraries.ui_material)
     //dependency injection
     implementation(Depends.Libraries.hilt_android)
     kapt(Depends.Libraries.hilt_android_compiler)
