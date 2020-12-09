@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
@@ -20,7 +21,6 @@ import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import androidx.paging.PagingData
 import androidx.recyclerview.widget.RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
-import androidx.ui.tooling.preview.Preview
 import app.web.drjackycv.domain.base.Failure
 import app.web.drjackycv.domain.base.RecyclerItem
 import app.web.drjackycv.domain.products.entity.Beer
